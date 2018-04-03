@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>Whoqol</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="wholqol">
+        <h3>Instruções</h3>
+        <p>Este questionário é sobre como você se sente a respeito de sua qualidade de vida, saúde e outras áreas de sua vida. <b>Por favor, responda a todas as questões.</b> Se você não tem certeza sobre que resposta dar em uma questão, por favor, escolha
+            entre as alternativas a que lhe parece mais apropriada. Esta, muitas vezes, poderá ser sua primeira escolha.</p>
+
+        <p>Por favor, tenha em mente seus valores, aspirações, prazeres e preocupações. Nós estamos perguntando o que você acha de sua vida, tomando como referência as <b>duas últimas semanas</b>. Por exemplo, as perguntas abaixo estão listadas com a resposta
+            de 1 a 5, para responde-lás você deve ter em mente que se inserir o valor: <br><br> <b>1- Nada / Muito instatisfeito / Nunca<br> 2- Muito Pouco / Insatisfeito / Algumas vezes<br> 3- Médio / Nem satisfeito, nem insatisfeito / Algumas vezes<br> 4- Muito / satisfeito
+            / muito frequente<br> 5- Completamente / Muito satisfeito / Sempre</b>
+        </p>
+        <p>Você deve preencher todas as alternativas.</p>
+    </div>
+    <ion-list *ngFor="let perguntas of Pergunta; let i=index">
+        <ion-list-header class="perguntas">
+            {{perguntas.pergunta}}
+        </ion-list-header>
+        <ion-list [ngSwitch]="perguntas.idPergunta" required>
+            <ion-item>
+                <ion-label>Resposta</ion-label>
+                <ion-select name="{{perguntas.idPergunta}}" [(ngModel)]="resposta.resposta[perguntas.idPergunta]">
+                    <ion-option value="1">1</ion-option>
+                    <ion-option value="2">2</ion-option>
+                    <ion-option value="3">3</ion-option>
+                    <ion-option value="4">4</ion-option>
+                    <ion-option value="5">5</ion-option>
+                </ion-select>
+            </ion-item>
+        </ion-list>
+    </ion-list>
+    <button ion-button block type="submit" class="button-aceitar" (click)="salvaWhoqol()">Salvar</button>
+</ion-content>

@@ -1,0 +1,100 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">Parte Corpo</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="antes">
+        <ion-label class="titulo-card">Selecione as Fotos da Parte do Corpo</ion-label>
+        <ion-list class="tutorial">
+            <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+            <h2>Veja como tirar as fotos</h2>
+            <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+                <ion-img width="280" height="420" style="margin-top: 10px" src="assets/imgs/tutorial-parte-corpo.jpg"></ion-img>
+            </expandable>
+            </button>
+        </ion-list>
+        <div class="cards cards-principal">
+            <ion-card class="imagem-corpo">
+                <ion-label class="titulo-foto">Foto Lateral</ion-label>
+                <div class="picture_upload_cont" style="margin-bottom: 10px;">
+                    <label for="before_photo_1" class="Perfil_image_label">
+                        <div class="thumb cadastral_image2">
+                            <img id="preview_image1" 
+                            [src]="img1" *ngIf="img1"  class="north"
+                            alt=""  width="280" height="300" style="width: 150px !important; margin: 0 auto;height: 200px;" />
+                        </div>
+                    </label>
+                    <input style="display:none" name="fileUpload[]" (change)="fileChangeUm($event)" class="fileUpload inputfile" type="file" id="before_photo_1" accept="image/*" capture="camera" />
+                </div>
+                <div class="girarBotoes">
+                    <button ion-button color="dark" id="giraEsquerdaUm" (click)="girarEsquerdaUm()" outline style="width: 0% !important;"><ion-icon name="arrow-back"></ion-icon></button>
+                    <h2>Girar</h2>
+                    <button ion-button color="dark" id="giraDireitaUm" (click)="girarDireitaUm()" outline style="width: 0% !important;"><ion-icon name="arrow-forward"></ion-icon></button>
+                </div>
+            </ion-card>
+            <ion-card class="imagem-corpo">
+                <ion-label class="titulo-foto">Foto Frente</ion-label>
+                <div class="picture_upload_cont" style="margin-bottom: 10px;">
+                    <label for="photo_2" class="Perfil_image_label">
+                        <div class="thumb cadastral_image2">
+                            <img id="preview_image2" 
+                            [src]="img2" *ngIf="img2"
+                            alt=""  width="280" height="300" style="width: 150px !important; margin: 0 auto;height: 200px;" />
+                        </div>
+                    </label>
+                    <input style="display:none" name="fileUpload[]" (change)="fileChangeDois($event)" class="fileUpload inputfile" type="file" id="photo_2" accept="image/*" capture="camera" />
+                </div>
+                <div class="girarBotoes">
+                    <button ion-button color="dark" id="giraEsquerdaDois" (click)="girarEsquerdaDois()" outline style="width: 0% !important;"><ion-icon name="arrow-back"></ion-icon></button>
+                    <h2>Girar</h2>
+                    <button ion-button color="dark" id="giraDireitaDois" (click)="girarDireitaDois()" outline style="width: 0% !important;"><ion-icon name="arrow-forward"></ion-icon></button>
+                </div>
+            </ion-card>
+        </div>
+        <div class="cards cards-secundario">
+            <ion-card class="imagem-corpo">
+                <ion-label class="titulo-foto">Foto Costa</ion-label>
+                <div class="picture_upload_cont" style="margin-bottom: 10px;">
+                    <label for="photo_3" class="Perfil_image_label">
+                        <div class="thumb cadastral_image2">
+                            <img id="preview_image3" 
+                            [src]="img3" *ngIf="img3"
+                            alt=""  width="280" height="300" style="width: 150px !important; margin: 0 auto;height: 200px;" />
+                        </div>
+                    </label>
+                    <input style="display:none" name="fileUpload[]" (change)="fileChangeTres($event)" class="fileUpload inputfile" type="file" id="photo_3" accept="image/*" capture="camera" />
+                </div>
+                <div class="girarBotoes">
+                    <button ion-button color="dark" id="giraEsquerdaTres" (click)="girarEsquerdaTres()" outline style="width: 0% !important;"><ion-icon name="arrow-back"></ion-icon></button>
+                    <h2>Girar</h2>
+                    <button ion-button color="dark" id="giraDireitaTres" (click)="girarDireitaTres()" outline style="width: 0% !important;"><ion-icon name="arrow-forward"></ion-icon></button>
+                </div>
+            </ion-card>
+            <ion-card class="imagem-corpo">
+                <ion-label class="titulo-foto">Foto Balança</ion-label>
+                <div class="picture_upload_cont" style="margin-bottom: 10px;">
+                    <label for="photo_4" class="Perfil_image_label">
+                        <div class="thumb cadastral_image2">
+                            <img id="preview_image4" 
+                            [src]="img4" *ngIf="img4"
+                            alt=""  width="280" height="300" style="width: 150px !important; margin: 0 auto;height: 200px;" />
+                        </div>
+                    </label>
+                    <input style="display:none" name="fileUpload[]" (change)="fileChangeQuatro($event)" class="fileUpload inputfile" type="file" id="photo_4" accept="image/*" capture="camera" />
+                </div>
+                <div class="girarBotoes">
+                    <button ion-button color="dark" id="giraEsquerdaQuatro" (click)="girarEsquerdaQuatro()" outline style="width: 0% !important;"><ion-icon name="arrow-back"></ion-icon></button>
+                    <h2>Girar</h2>
+                    <button ion-button color="dark" id="giraDireitaQuatro" (click)="girarDireitaQuatro()" outline style="width: 0% !important;"><ion-icon name="arrow-forward"></ion-icon></button>
+                </div>
+            </ion-card>
+        </div>
+    </div>
+    <button ion-button block type="submit" class="button-salvar" (click)="salvarPartes()">Salvar</button>
+</ion-content>

@@ -1,0 +1,50 @@
+page-login {
+    ion-header {
+        display: none !important;
+    }
+    .background-login {
+        background: url(../assets/imgs/tela-login.png) no-repeat top left;
+        background-size: 100% 100%;
+    }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .logo ion-img {
+        display: flex;
+        min-width: 0;
+        min-height: 0;
+        background: none;
+        contain: unset;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+    .list-ios .item-block .item-inner {
+        border-bottom: 0.55px solid #c8c7cc !important;
+    }
+    .item-block:last-child {
+        border-bottom: none !important;
+    }
+    .item-block:first-child {
+        border-top: none !important;
+    }
+    .login .item {
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        font-size: 1.7rem;
+        color: #fff;
+        background-color: transparent;
+        border-radius: 0px;
+        transition: background-color 200ms linear;
+    }
+    button.button-login {
+        width: 100px;
+        margin: 0 auto;
+        background: #fff;
+        color: #000;
+    }
+}

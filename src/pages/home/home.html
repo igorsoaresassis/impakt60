@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+        <ion-title class="commenu">Home</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" padding>
+    <div class="cards-home">
+        <ion-card *ngFor="let card of cards" (click)="openPage(card.pagina)">
+            <img src="assets/imgs/{{card.icone}}.png" />
+            <div class="card-title">{{card.nome}}</div>
+        </ion-card>
+    </div>
+</ion-content>

@@ -1,0 +1,147 @@
+page-medida-login {
+    .medida {
+        text-align: center;
+        margin: 20px 0;
+        background: #ffffff;
+    }
+    .medida ion-img {
+        background: #ffffff;
+    }
+    .medida ion-label.label {
+        font-size: 15px;
+        color: #8b879e;
+        width: 50%;
+        margin-right: 0;
+        text-align: center;
+    }
+    .medida ion-label.titulo.label {
+        width: 100% !important;
+    }
+    .medida ion-label.peso.label {
+        width: 28% !important;
+        margin-left: 20px;
+    }
+    ion-label.kg-peso {
+        width: 12% !important;
+        position: absolute;
+        right: 20px;
+    }
+    .medida ion-label.abdomen.label {
+        width: 45% !important;
+        margin-left: 5px;
+    }
+    ion-label.cm-abdomen {
+        width: 13% !important;
+        position: absolute;
+        right: 4px;
+    }
+    .medida ion-label.quadril.label {
+        width: 31% !important;
+        margin-left: 18px;
+    }
+    ion-label.cm-quadril {
+        width: 13% !important;
+        position: absolute;
+        right: 16px;
+    }
+    .medida ion-label.cintura.label {
+        width: 31% !important;
+        margin-left: 18px;
+    }
+    ion-label.cm-cintura {
+        width: 13% !important;
+        position: absolute;
+        right: 16px;
+    }
+    .dado-medida {
+        display: flex;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        background: #f0f0f0;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    .dado-medida .dado-imagem {
+        width: 30%;
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        align-content: center !important;
+    }
+    .dado-medida .dado-imagem img {
+        width: 100%;
+        border-right: 1px solid #7362a8 !important;
+        padding-right: 10px;
+    }
+    .dado-medida ion-item.item {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: start !important;
+        align-items: start !important;
+        align-content: start !important;
+        padding-left: 0 !important;
+        background: #f0f0f0 !important;
+        width: 70%;
+    }
+    ion-label.cm.label {
+        width: 16% !important;
+    }
+    .dado-medida .item-block .item-inner {
+        border-bottom: none !important;
+        padding: 0 !important;
+    }
+    .dado-medida input.text-input {
+        color: #8b879e;
+        width: 55px !important;
+        margin: 13px 0 0 0px !important;
+        border-bottom: 1px solid #000;
+        text-align: center;
+        height: 18px;
+    }
+    .list-md .item-input:last-child {
+        border-bottom: none !important;
+    }
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+    button.button-voltar {
+        width: 100px;
+        background: #f0f0f0 !important;
+        color: #fff;
+        margin-right: 10px;
+    }
+    button.button-salvar {
+        width: 100px;
+        background: #7362a8 !important;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .list-ios {
+        margin: 0 !important;
+    }
+    ion-list.tutorial.list {
+        width: 100%;
+        margin: 0 !important;
+    }
+    .tutorial ion-label.label {
+        margin: 10px 15px;
+        color: red;
+        border-radius: 10px;
+        /* : 150px; */
+        text-align: center;
+        padding: 10px 0;
+    }
+    .list-md .item-block .item-inner {
+        border-bottom: 0 !important;
+    }
+}

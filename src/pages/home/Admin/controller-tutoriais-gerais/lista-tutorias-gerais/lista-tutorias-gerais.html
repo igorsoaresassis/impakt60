@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">listaTutoriasGerais</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let Geral of Gerais">
+        <div *ngIf="Geral.tipoArquivo == '1'">
+            <img src="{{Geral.urlArquivo}}" (click)="abrirImagem()" />
+        </div>
+        <div *ngIf="Geral.tipoArquivo == '2'">
+            <img src="assets/imgs/logo.png" (click)="iniciarVideo(Geral.id)" />
+        </div>
+        <div *ngIf="Geral.tipoArquivo == '3'">
+            <img src="assets/imgs/logo.png" (click)="abrirAudio()" />
+        </div>
+        <div *ngIf="Geral.tipoArquivo == '4'">
+            <img src="assets/imgs/logo.png" (click)="downloadDocumento()" />
+        </div>
+        <ion-card-content>
+            <ion-card-title>
+                {{Geral.nome}}
+            </ion-card-title>
+            <div class="buttons" *ngIf="Geral.status == '1'">
+                <button ion-button color="danger" outline (click)="inativarAtivarTutorial(Geral.id, Geral.status)">Inativar</button>
+            </div>
+            <!-- <div class="buttons" *ngIf="Geral.status == '0'">
+                <button ion-button color="secondary " outline(click)="inativarAtivarTutorial(Geral.id, Geral.status)">Ativar</button>
+            </div> -->
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

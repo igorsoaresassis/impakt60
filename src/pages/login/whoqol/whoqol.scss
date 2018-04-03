@@ -1,0 +1,14 @@
+page-whoqol {
+    .perguntas ion-label {
+        white-space: normal !important;
+    }
+    ion-select {
+        max-width: 54% !important
+    }
+    .wholqol {
+        padding: 15px;
+    }
+    .wholqol p {
+        text-align: justify
+    }
+}

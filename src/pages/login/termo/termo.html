@@ -1,0 +1,22 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title class="semmenu">Termo</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="termo-app">
+        <p class="negrito">
+            TERMO DE SIGILO E CONFIDENCIALIDADE
+        </p>
+        <p>
+            Pelo presente Termo o Distribuidor <b>{{nome}}</b> cadastrado sob o ID nº <b>{{idTermo}}</b> inscrito no CPF nº <b>{{cpf}}</b> e RG nº <b>{{rg}}</b> se obriga a manter o mais absoluto sigilo e confidencialidade com relação a toda e qualquer
+            informação a que tiver acesso sobre o PROGRAMA IMPAKT 60, desenvolvido e ministrado pelo Grupo Akmos, utilizando como meio de treinamento o grupo criado no aplicativo WhatsApp. Para tanto, declara e se compromete:
+        </p>
+        <div [innerHTML]="termo"></div>
+        <button ion-button block type="submit" class="button-aceitar" (click)="aceitaTermo()">Aceitar</button>
+    </div>
+</ion-content>

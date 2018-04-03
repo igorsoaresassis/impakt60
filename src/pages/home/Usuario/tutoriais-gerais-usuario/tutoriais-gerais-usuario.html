@@ -1,0 +1,34 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">tutoriaisGerais</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="tutorial-geral">
+        <ion-card *ngFor="let Tutorial of TutoriasGerais">
+            <div *ngIf="Tutorial.tipoArquivo == '1'">
+                <img src="{{Tutorial.urlArquivo}}" />
+            </div>
+            <div *ngIf="Tutorial.tipoArquivo == '2'">
+                <img src="assets/imgs/logo.png" (click)="iniciarVideo(Tutorial.id)" />
+            </div>
+            <div *ngIf="Tutorial.tipoArquivo == '3'">
+                <img src="assets/imgs/logo.png" (click)="abrirAudio()" />
+            </div>
+            <div *ngIf="Tutorial.tipoArquivo == '4'">
+                <img src="assets/imgs/logo.png" (click)="downloadDocumento()" />
+            </div>
+            <ion-card-content>
+                <ion-card-title>
+                    {{Tutorial.nome}}
+                </ion-card-title>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

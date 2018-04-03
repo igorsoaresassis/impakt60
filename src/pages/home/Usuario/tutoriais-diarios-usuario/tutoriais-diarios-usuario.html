@@ -1,0 +1,40 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">tutoriaisDiariosUsuario</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-label class="labelData">Data Selecionada</ion-label>
+    <div class="selecionarData">
+        <ion-datetime class="data" pickerFormat="DD/MM/YYYY" displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        <button ion-button block class="button-seleciona" (click)="selecionarData()">Historico</button>
+    </div>
+    <div class="tutoriais-diarios" *ngFor="let Diario of TutoriaisDiarios">
+        <ion-card *ngIf="Diario.retorno == 'Sucesso'">
+            <div *ngIf="Diario.tipoArquivo == '1'">
+                <img src="{{Diario.urlArquivo}}" />
+            </div>
+            <div *ngIf="Diario.tipoArquivo == '2'">
+                <img src="assets/imgs/logo.png" (click)="iniciarVideo(Diario.id)" />
+            </div>
+            <div *ngIf="Diario.tipoArquivo == '3'">
+                <img src="assets/imgs/logo.png" (click)="abrirAudio()" />
+            </div>
+            <div *ngIf="Diario.tipoArquivo == '4'">
+                <img src="assets/imgs/logo.png" (click)="downloadDocumento()" />
+            </div>
+            <ion-card-content>
+                <ion-card-title>
+                    {{Diario.nome}}
+                </ion-card-title>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

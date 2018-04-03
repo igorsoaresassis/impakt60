@@ -1,0 +1,48 @@
+page-perfil {
+    .foto-perfil {
+        margin: 0 auto;
+        width: 100px;
+        margin-top: 20px;
+    }
+    .foto-perfil ion-img {
+        background: #fff !important;
+    }
+    ion-img.camera-perfil {
+        width: 50% !important;
+        position: relative;
+        left: 70px;
+        bottom: 40px;
+        background: transparent !important;
+        height: 50px !important;
+    }
+    .botoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-content: flex-end;
+        align-items: flex-end;
+    }
+    button.button-voltar {
+        width: 100px;
+        background: #f0f0f0 !important;
+        color: #fff;
+        margin-right: 10px;
+    }
+    button.button-salvar {
+        width: 100px;
+        background: #7362a8 !important;
+        color: #fff;
+        margin-right: 10px;
+    }
+    .list-ios>.item-block:first-child {
+        border-top: none;
+    }
+    .list-ios>.item-block:last-child {
+        border-bottom: none
+    }
+    ion-label.contato {
+        margin: 40px 15px;
+        font-size: 17px;
+        color: #aaa;
+    }
+}

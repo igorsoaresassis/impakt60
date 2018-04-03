@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">tutoriais-semanais-usuario</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="tutoriais-semanais">
+        <ion-card>
+            <img src="assets/imgs/logo.png" (click)="iniciarVideo()" />
+            <div class="card-subtitle">{{semanais}}</div>
+        </ion-card>
+    </div>
+</ion-content>

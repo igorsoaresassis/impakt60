@@ -1,0 +1,66 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">Historico</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="historico-medidas">
+    <ion-card class="calendario" *ngFor="let atual of historico">
+        <ion-card-content>
+            <div class="mes">
+                <ion-label class="previous" outline (click)="slidePrevius()">&lsaquo;</ion-label>
+                <ion-label class="nome">{{atual.mesString}}</ion-label>
+                <ion-label class="next" outline (click)="slideNext()">&rsaquo;</ion-label>
+            </div>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="historico">
+        <ion-card-content>
+            <ion-row class="cabecalho">
+                <ion-col>
+                    <strong>Dia</strong>
+                </ion-col>
+                <ion-col>
+                    <strong>Peso</strong>
+                </ion-col>
+                <ion-col>
+                    <strong>Abdo.</strong>
+                </ion-col>
+                <ion-col>
+                    <strong>Quadril</strong>
+                </ion-col>
+                <ion-col>
+                    <strong>Cintura</strong>
+                </ion-col>
+                <ion-col>
+                </ion-col>
+            </ion-row>
+            <ion-row class="conteudo" *ngFor="let dados of historico">
+                <ion-col>
+                    <ion-label><b class="dia-data">{{dados.dia}}</b></ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label>{{dados.peso}}</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label>{{dados.abdomen}}</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label>{{dados.cintura}}</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-label>{{dados.quadril}}</ion-label>
+                </ion-col>
+                <ion-col>
+                    <ion-img width="30" height="30" src="assets/imgs/positivo.png"></ion-img>
+                </ion-col>
+            </ion-row>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

@@ -1,0 +1,17 @@
+page-tutoriais-semanais-usuario {
+    .tutoriais-semanais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        padding: 10px;
+    }
+    .tutoriais-semanais ion-card.card {
+        margin: 10px !important;
+    }
+    .card-subtitle {
+        text-align: center;
+        margin: 10px;
+    }
+}

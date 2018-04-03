@@ -1,0 +1,38 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle class="menu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">alimentacao</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="alimentacao">
+    <ion-card style="height: 300px">
+
+        <!-- <div class="fileUpload btn btn-primary"> -->
+        <img src="{{image}}" />
+        <input type="file" (change)="file($event)" id="file-input" accept="image/*" style="position:absolute; top: -999999px" #fileInp>
+        <button ion-button (click)="onClick()">Upload</button>
+        <!-- <input ng2FileSelect [uploader]="fileUpload" name="fileUpload" class="upload" type="file" id="fileUpload " accept="image/* " capture="camera " /> -->
+        <!-- </div> -->
+    </ion-card>
+    <ion-list>
+        <ion-item>
+            <ion-label>Tipo</ion-label>
+            <ion-select [(ngModel)]="campo ">
+                <ion-option value="url_treino_1">Treino 1</ion-option>
+                <ion-option value="url_cafe_manha">Café da Manhã</ion-option>
+                <ion-option value="url_suplemento_1">Suplemento 1</ion-option>
+                <ion-option value="url_almoco">Almoço</ion-option>
+                <ion-option value="url_suplemento_2">Suplemento 2</ion-option>
+                <ion-option value="url_lanche_tarde">Lanche tarde</ion-option>
+                <ion-option value="url_treino_2">Treino 2</ion-option>
+                <ion-option value="url_jantar">Jantar</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <button ion-button block type="submit " class="button-salvar " (click)="salvaAlimentacao() ">Salvar</button>
+</ion-content>

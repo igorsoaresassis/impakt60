@@ -1,0 +1,30 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">listaTutoriasGerais</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card *ngFor="let Semanal of Semanais">
+        <img src="assets/imgs/logo.png" (click)="iniciarVideo(Semanal.id)" />
+        <ion-card-content>
+            <ion-card-title>
+                {{Semanal.semana}}
+            </ion-card-title>
+            <!-- <div class="buttons" *ngIf="Semanal.status == '1'">
+                <button ion-button color="danger" outline (click)="inativarAtivarTutorial(Geral.id, Geral.status)">Inativar</button>
+            </div> -->
+            <!-- <div class="buttons" *ngIf="Geral.status == '0'">
+                <button ion-button color="secondary " outline(click)="inativarAtivarTutorial(Geral.id, Geral.status)">Ativar</button>
+            </div> -->
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

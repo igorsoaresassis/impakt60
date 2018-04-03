@@ -1,0 +1,36 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>chat-equipe</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="" *ngFor="let chats of Chat">
+        <div *ngIf="chats.idCadastro != id_usuario">
+            <ion-label>{{chats.idCadastro}}</ion-label>
+            {{chats.mensagem}}
+        </div>
+        <div *ngIf="chats.idCadastro == id_usuario">
+            <ion-label>{{chats.idCadastro}}</ion-label>
+            {{chats.mensagem}}
+        </div>
+    </div>
+    <!-- <div *ngIf="RetornoMensagem == 'Sucesso'">
+        <ion-label>{{id_usuario}}</ion-label>
+        {{MensagemEnviada}} {{IdAntigo === IdEnviada}}
+    </div> -->
+    <div id="team_chat_here"></div>
+</ion-content>
+
+<ion-footer no-border>
+    <div class="input-wrap">
+        <textarea placeholder="Mensagem" id="team_chat_message" [(ngModel)]="mensagem">
+        </textarea>
+        <button ion-button clear icon-only item-right (click)="enviarMensagem()">
+          <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
+        </button>
+    </div>
+</ion-footer>

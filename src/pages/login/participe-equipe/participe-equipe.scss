@@ -1,0 +1,15 @@
+page-participe-equipe {
+    .item-block:first-child {
+        border-top: none !important;
+    }
+    .codigo-participe {
+        margin-bottom: 5px !important;
+    }
+    button.button-participe {
+        width: 100px;
+        background: #7362a8 !important;
+        color: #fff;
+        float: right;
+        margin-right: 10px;
+    }
+}

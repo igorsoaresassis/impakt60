@@ -1,0 +1,60 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title class="semmenu">exame</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <form (submit)="enviaExames()" class="exames">
+        <ion-list>
+            <ion-item>
+                <ion-label floating>Colesterol HDL</ion-label>
+                <ion-input [(ngModel)]="colesterolhdl" name="colesterolhdl" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Colesterol LDL</ion-label>
+                <ion-input [(ngModel)]="colesterolldl" name="colesterolldl" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Colesterol Total</ion-label>
+                <ion-input [(ngModel)]="colesteroltotal" name="colesteroltotal" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Triglicérides</ion-label>
+                <ion-input [(ngModel)]="triglicerides" name="triglicerides" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Pressão Arterial</ion-label>
+                <ion-input [(ngModel)]="pressaoarterial" name="pressaoArterial" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>glicose</ion-label>
+                <ion-input [(ngModel)]="glicose" name="glicose" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Hemograma Hemácias</ion-label>
+                <ion-input [(ngModel)]="hemogramahemacias" name="hemogramaHemacias" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Hemograma Hematócrito</ion-label>
+                <ion-input [(ngModel)]="hemogramahematocrito" name="hemogramaHematocrito" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Hemograma Hemoglobina</ion-label>
+                <ion-input [(ngModel)]="hemogramahemoglobina" name="hemogramaHemoglobina" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Hemograma Leucócitos</ion-label>
+                <ion-input [(ngModel)]="hemogramaleucocitos" name="hemogramaLeucocitos" type="number" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Hemograma Plaquetas</ion-label>
+                <ion-input [(ngModel)]="hemogramaplaquetas" name="hemogramaPlaquetas" type="number" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" class="button-salvar">Salvar</button>
+    </form>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">historico-rota</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-slides #slider pager (ionDrag)="onIonDrag($event)">
+        <ion-slide class="historico-rota">
+            <ion-card class="calendario">
+                <ion-card-content>
+                    <div class="mes">
+                        <ion-label class="previous" outline (click)="slideNext()">&lsaquo;</ion-label>
+                        <ion-label class="nome">Julho</ion-label>
+                        <ion-label class="next" outline (click)="slideNext()">&rsaquo;</ion-label>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="valores-mes">
+                <ion-card-content>
+                    <div class="dados">
+                        <ion-img width="70" height="70" src="../../assets/imgs/icone-perfil.png" class="imagem-rota"></ion-img>
+                        <div class="tempo-dia">
+                            <ion-label class="tempo"><b class="valor">6.0</b> km &nbsp;<b class="valor">1:00:00</b> duração</ion-label>
+                            <ion-label class="dia">25 de Julho de 2017</ion-label>
+                        </div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="valores-mes">
+                <ion-card-content>
+                    <div class="dados">
+                        <ion-img width="70" height="70" src="../../assets/imgs/icone-perfil.png" class="imagem-rota"></ion-img>
+                        <div class="tempo-dia">
+                            <ion-label class="tempo"><b class="valor">6.0</b> km &nbsp;<b class="valor">1:00:00</b> duração</ion-label>
+                            <ion-label class="dia">25 de Julho de 2017</ion-label>
+                        </div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+        <ion-slide class="historico-rota">
+            <ion-card class="calendario">
+                <ion-card-content>
+                    <div class="mes">
+                        <ion-label class="previous" outline (click)="slidePreviuos()">&lsaquo;</ion-label>
+                        <ion-label class="nome">Agosto</ion-label>
+                        <ion-label class="next" outline (click)="slideNext()">&rsaquo;</ion-label>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="valores-mes">
+                <ion-card-content>
+                    <div class="dados">
+                        <ion-img width="70" height="70" src="../../assets/imgs/icone-perfil.png" class="imagem-rota"></ion-img>
+                        <div class="tempo-dia">
+                            <ion-label class="tempo"><b class="valor">6.0</b> km &nbsp;<b class="valor">1:00:00</b> duração</ion-label>
+                            <ion-label class="dia">25 de Julho de 2017</ion-label>
+                        </div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+            <ion-card class="valores-mes">
+                <ion-card-content>
+                    <div class="dados">
+                        <ion-img width="70" height="70" src="../../assets/imgs/icone-perfil.png" class="imagem-rota"></ion-img>
+                        <div class="tempo-dia">
+                            <ion-label class="tempo"><b class="valor">6.0</b> km &nbsp;<b class="valor">1:00:00</b> duração</ion-label>
+                            <ion-label class="dia">25 de Julho de 2017</ion-label>
+                        </div>
+                    </div>
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

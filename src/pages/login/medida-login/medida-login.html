@@ -1,0 +1,70 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">Registro</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="medida">
+        <ion-img width="100" height="100" src="assets/imgs/card-medidas.png"></ion-img>
+        <ion-label class="titulo">Pesos e Medidas</ion-label>
+    </div>
+    <ion-list class="tutorial">
+        <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+            <h2>Veja como tirar as fotos</h2>
+            <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+                <ion-img width="280" height="420" style="margin-top: 10px" src="assets/imgs/tutorial-parte-corpo.jpg"></ion-img>
+            </expandable>
+            </button>
+    </ion-list>
+    <form class="medida">
+        <ion-list>
+            <div class="dado-medida">
+                <div class="dado-imagem">
+                    <img class="icone-peso" src="assets/imgs/icone-peso.png" />
+                </div>
+                <ion-item class="itens-medida">
+                    <ion-label class="peso">Peso</ion-label>
+                    <ion-input [(ngModel)]="peso" name="peso" type="number" required></ion-input>
+                    <ion-label class="kg-peso">kg</ion-label>
+                </ion-item>
+            </div>
+            <div class="dado-medida">
+                <div class="dado-imagem">
+                    <img class="icone-peso" src="assets/imgs/icone-abdomem.png" />
+                </div>
+                <ion-item>
+                    <ion-label class="abdomen">Abdomen</ion-label>
+                    <ion-input [(ngModel)]="abdomen" name="abdomen" type="number" required></ion-input>
+                    <ion-label class="cm-abdomen">cm</ion-label>
+                </ion-item>
+            </div>
+            <div class="dado-medida">
+                <div class="dado-imagem">
+                    <img class="icone-peso" src="assets/imgs/icone-quadril.png" />
+                </div>
+                <ion-item>
+                    <ion-label class="quadril">Quadril</ion-label>
+                    <ion-input [(ngModel)]="quadril" name="quadril" type="number" required></ion-input>
+                    <ion-label class="cm-quadril">cm</ion-label>
+                </ion-item>
+            </div>
+            <div class="dado-medida">
+                <div class="dado-imagem">
+                    <img class="icone-peso" src="assets/imgs/icone-cintura.png" />
+                </div>
+                <ion-item>
+                    <ion-label class="cintura">Cintura</ion-label>
+                    <ion-input [(ngModel)]="cintura" name="cintura" type="number" required></ion-input>
+                    <ion-label class="cm-cintura">cm</ion-label>
+                </ion-item>
+            </div>
+        </ion-list>
+        <div class="botoes">
+            <button ion-button block type="submit" class="button-salvar" (click)="salvarMedidas()">Salvar</button>
+        </div>
+    </form>
+</ion-content>

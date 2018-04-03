@@ -1,0 +1,18 @@
+<ion-content padding class="background-login">
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="logo">
+        <ion-img width="159" height="160" src="assets/imgs/main-logo.png"></ion-img>
+    </div>
+    <br><br>
+    <form (submit)="efetuaLogin()" class="login">
+        <ion-list>
+            <ion-item>
+                <ion-input name="id" type="number" placeholder="ID" [(ngModel)]="id" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-input name="senha" type="password" placeholder="Senha" [(ngModel)]="pswd" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button class="submit-btn" full type="submit" class="button-login">Login</button>
+    </form>
+</ion-content>

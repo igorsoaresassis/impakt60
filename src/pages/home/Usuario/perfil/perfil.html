@@ -1,0 +1,32 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">perfil</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <div class="foto-perfil">
+        <div class="picture_upload_cont" style="margin-bottom: 10px;">
+            <label for="user_image" class="Perfil_image_label">
+                    <div class="thumb cadastral_image" id="loadUrl"></div>
+                    <img src="{{url_foto_perfil}}" alt="" class="cam">
+                </label>
+            <input style="display:none;" name="fileUpload[]" (change)="fileChangeUm($event)" type="file" id="user_image" accept="image/*" capture="camera" class="fileUpload">
+        </div>
+    </div>
+    <br><br><br><br><br>
+    <ion-item-group>
+        <ion-item><b>Id:</b> {{login}}</ion-item>
+        <ion-item><b>Nome:</b> {{nome}}</ion-item>
+    </ion-item-group>
+    <br><br><br><br><br><br><br><br>
+    <div class="botoes">
+        <button ion-button block type="submit" class="button-voltar" (click)="voltar()">Voltar</button>
+        <button ion-button block type="submit" class="button-salvar" (click)="salvarFoto()">Salvar</button>
+    </div>
+</ion-content>

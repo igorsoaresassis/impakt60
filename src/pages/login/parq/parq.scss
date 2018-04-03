@@ -1,0 +1,70 @@
+page-parq {
+    .perguntas ion-label {
+        white-space: normal !important;
+    }
+    button.button-aceitar {
+        width: 100px;
+        background: #7362a8 !important;
+        color: #fff;
+        float: right;
+        margin-bottom: 10px;
+    }
+    .radio-icon {
+        display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+    }
+    .item-ios .radio-ios[item-left],
+    .item-ios .radio-ios[item-start],
+    .item-md .radio-md[item-left],
+    .item-md .radio-md[item-start] {
+        margin: 0 !important
+    }
+    .radio-resposta,
+    .radio-resposta .item-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border: 0 !important;
+        text-align: center;
+    }
+    .radio-resposta .input-wrapper {
+        border: 1px solid #000 !important;
+    }
+    .list-header-md,
+    .list-header-ios,
+    ion-item.item.item-block,
+    .list-ios .item-block .item-inner {
+        border: 0 !important;
+    }
+    .validacao .input-wrapper {
+        text-align: center;
+    }
+    ion-card-content.card-content {
+        padding: 0 !important;
+    }
+    ion-list.validacao {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        border-bottom: 1px solid #000;
+        margin: 0 0 10px 0 !important;
+    }
+    ion-row.active {
+        background-color: #f5f5f5;
+    }
+    ion-row.success {
+        background-color: #dff0d8;
+    }
+    ion-row.warning {
+        background-color: #fcf8e3;
+    }
+    ion-row.error {
+        background-color: #f2dede;
+    }
+}

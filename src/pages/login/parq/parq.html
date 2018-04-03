@@ -1,0 +1,41 @@
+<ion-header>
+
+    <ion-navbar>
+        <ion-title class="semmenu">Parq</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    <ion-list *ngFor="let perguntas of Pergunta; let i=index">
+        <ion-list-header class="perguntas">
+            {{perguntas.pergunta}}
+        </ion-list-header>
+        <ion-card-content [ngSwitch]="perguntas.idPergunta">
+            <ion-list class="validacao" radio-group name="{{perguntas.idPergunta}}" [(ngModel)]="resposta.resposta[perguntas.idPergunta]" required>
+                <ion-item>
+                    <ion-label>Sim</ion-label>
+                    <ion-radio value="1"></ion-radio>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Não</ion-label>
+                    <ion-radio value="0"></ion-radio>
+                </ion-item>
+            </ion-list>
+        </ion-card-content>
+    </ion-list>
+
+    <ion-list>
+        <button detail-none (click)="expandItem(item)" ion-item *ngFor="let item of items">
+        <h2>Tabela</h2>
+        <expandable [expandHeight]="itemExpandHeight" [expanded]="item.expanded">
+            <ion-img width="290" height="180" src="assets/imgs/tabela-mulher.png"></ion-img>
+            <br>
+            <ion-img width="290" height="180" src="assets/imgs/tabela-homem.png"></ion-img>
+        </expandable>
+        </button>
+    </ion-list>
+
+    <button ion-button block type="submit" class="button-aceitar" (click)="salvarParq()">Salvar</button>
+</ion-content>

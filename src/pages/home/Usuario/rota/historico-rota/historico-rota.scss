@@ -1,0 +1,76 @@
+page-historico-rota {
+    .historico-rota .slide-zoom {
+        position: absolute;
+        top: 0;
+    }
+    ion-label.previous.label,
+    ion-label.next.label {
+        font-size: 50px;
+        margin: 0;
+        float: left;
+        height: 30px !important;
+        color: #fff;
+        line-height: 23px;
+        flex: none;
+        width: 10%;
+    }
+    ion-card.calendario.card {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        background: #e5e5e5;
+    }
+    .mes {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .mes ion-label.nome {
+        margin: 0;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+    ion-card.valores-mes {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+    .valores-mes ion-card-content {
+        width: 100%;
+        padding: 0 !important;
+        border-top: 2px solid #fff;
+    }
+    .dados {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    ion-img.imagem-rota img {
+        width: 100%;
+    }
+    .tempo-dia {
+        width: 80%;
+        background: #f5f5f5;
+    }
+    .tempo-dia .tempo,
+    .tempo-dia .dia {
+        margin: 0 !important;
+        color: #555;
+    }
+    .valor {
+        font-size: 20px;
+        color: #716992;
+    }
+    ion-label.tempo.label {
+        padding-top: 10px;
+    }
+    ion-label.dia.label {
+        text-align: left;
+        margin-left: 36px !important;
+    }
+    ion-img.imagem-rota {
+        background: #f5f5f5;
+    }
+}

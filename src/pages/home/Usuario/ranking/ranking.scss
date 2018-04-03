@@ -1,0 +1,107 @@
+page-ranking {
+    .ranking {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .ranking ion-img {
+        background: #917ecf;
+    }
+    .ranking ion-label {
+        color: #fff;
+        font-size: 20px;
+    }
+    .background-ranking {
+        background: #917ecf;
+    }
+    .ranking-premiacao-pontuacao {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 90%;
+        margin: 0 auto;
+        background: #917ecf;
+    }
+    .ranking-premiacao-pontuacao ion-card-content.card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        padding: 5px;
+        background: #54458a;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        margin-bottom: 5px;
+    }
+    .ranking-premiacao-pontuacao .principais {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    ion-label.lugar.label {
+        flex: none;
+        padding: 0 5px 0 10px;
+        border-right: 1px solid #fff;
+        font-size: 25px;
+        color: #fff;
+    }
+    ion-label.nome.label {
+        font-size: 15px;
+        margin-bottom: 0;
+        color: #fff;
+    }
+    ion-img.imagem-ranking {
+        background: #54458a;
+    }
+    ion-label.nome-equipe.label {
+        margin: 0 0 5px 0;
+        color: #fff;
+        font-size: 10px;
+    }
+    .pontuacao {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 90%;
+        margin: 0 auto;
+        background: #917ecf;
+    }
+    .pontuacao ion-card-content.card-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        padding: 5px;
+        background: #917ecf;
+        border-radius: 10px;
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.3) !important;
+        margin-bottom: 5px;
+    }
+    .pontuacao .principais {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+    }
+    .nome-class {
+        width: 70%;
+    }
+}

@@ -1,0 +1,24 @@
+<ion-header>
+
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title class="commenu">controllerTutoriaisSemanais</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <button ion-button block class="button-todos-tutoriais" (click)="entraTutoriais()">
+        <img class="icone-menu" src="assets/imgs/card-tutorialSemanal.png" />
+        Tutoriais Semanais
+    </button>
+    <button ion-button block class="button-novo-tutoriais" (click)="cadastraTutoriais()">
+        <img class="icone-menu" src="assets/imgs/card-tutorialSemanal.png" />
+        Novo Tutorial Semanal
+    </button>
+
+</ion-content>

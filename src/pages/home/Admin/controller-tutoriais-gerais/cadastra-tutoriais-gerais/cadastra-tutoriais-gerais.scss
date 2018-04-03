@@ -1,0 +1,9 @@
+page-cadastra-tutoriais-gerais {
+    .custom-file-input {
+        color: transparent;
+    }
+    .custom-file-input::before {
+        content: 'Selecione o Arquivo: (Video, Foto, audio e Doc)';
+        color: #a1a1a1;
+    }
+}
